@@ -1,0 +1,302 @@
+/* =========================================================
+   WEB SKILLS LAB: CSS PRACTICE FILE
+   Topics: variables, selectors, cascade, box model, typography,
+   colors, backgrounds, sizing, Flexbox, Grid, pseudo-classes,
+   transitions, shadows, responsive media queries and focus.
+   ========================================================= */
+
+/* 1. CSS variables: define reusable values in one place */
+:root {
+  --ink: #172033;
+  --muted: #667085;
+  --brand: #5b5ce2;
+  --brand-dark: #4142b8;
+  --surface: #ffffff;
+  --surface-soft: #f4f6fb;
+  --border: #e3e7ef;
+  --radius: 1.1rem;
+  --shadow: 0 16px 40px rgba(23, 32, 51, 0.08);
+}
+
+/* 2. Universal selector and box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--surface);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+/* 3. Element, class and descendant selectors */
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+p {
+  color: var(--muted);
+}
+
+a {
+  color: var(--brand);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--brand-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+/* 4. Brand styles and hero layout */
+.brand-dot {
+  color: #a5a6ff;
+}
+
+.hero-section {
+  color: #fff;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(122, 123, 255, 0.42), transparent 30%),
+    linear-gradient(135deg, #11172a 0%, #22285a 55%, #4546a5 100%);
+}
+
+.hero-section h1 {
+  max-width: 12ch;
+}
+
+.eyebrow {
+  color: var(--brand);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.hero-section .eyebrow {
+  color: #c7c8ff;
+}
+
+.hero-copy {
+  max-width: 58ch;
+  color: #e0e3f4;
+}
+
+.hero-card {
+  padding: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  background: rgba(7, 11, 30, 0.48);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px);
+}
+
+.code-window-top {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  color: #c9cce2;
+}
+
+.code-window-top span {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: #ff7b72;
+}
+
+.code-window-top span:nth-child(2) { background: #ffc857; }
+.code-window-top span:nth-child(3) { background: #55d6a7; }
+
+.code-window-top small {
+  margin-left: auto;
+}
+
+.hero-card pre {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  color: #e5e7ff;
+  font-size: 0.9rem;
+}
+
+/* 5. Reusable section spacing and headings */
+.section-pad {
+  padding: 5rem 0;
+}
+
+.section-tint {
+  background: var(--surface-soft);
+}
+
+.section-heading {
+  max-width: 44rem;
+  margin-bottom: 2rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 750;
+}
+
+/* 6. Cards: border, padding, radius, shadow */
+.learning-card {
+  height: 100%;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.learning-card h3 {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 750;
+}
+
+.topic-number {
+  display: inline-grid;
+  width: 2.2rem;
+  height: 2.2rem;
+  place-items: center;
+  border-radius: 0.7rem;
+  color: var(--brand-dark);
+  background: #eeeeff;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.demo-image {
+  width: 100%;
+  max-height: 12rem;
+  object-fit: cover;
+}
+
+/* 7. Box model demonstration */
+.css-demo {
+  padding: 2rem; /* Space inside the border */
+  border: 4px solid var(--brand); /* Edge around content */
+  margin: 0.5rem; /* Space outside the border */
+  border-radius: 1rem;
+  background: #fff;
+}
+
+/* 8. Flexbox: align items on one axis */
+.flex-demo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.75rem;
+  min-height: 9rem;
+  padding: 1rem;
+  border: 1px dashed #a5a6d8;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.flex-demo div {
+  padding: 0.8rem 1rem;
+  border-radius: 0.7rem;
+  color: #fff;
+  background: var(--brand);
+  font-weight: 650;
+}
+
+/* 9. CSS Grid: rows and columns */
+.grid-demo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.grid-demo div {
+  padding: 1rem;
+  border: 1px solid #d9dcff;
+  border-radius: 0.7rem;
+  background: #eeeeff;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* 10. Pseudo-class and transition */
+.hover-demo {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: #fff;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.hover-demo:hover {
+  transform: translateY(-4px);
+  border-color: #b7b8ff;
+  box-shadow: var(--shadow);
+}
+
+/* 11. Footer */
+.site-footer {
+  color: #e5e7eb;
+  background: #151a2b;
+}
+
+.site-footer p {
+  color: #d0d5e2;
+}
+
+.site-footer a {
+  color: #c7c8ff;
+}
+
+/* 12. Responsive media queries: adjust for smaller screens */
+@media (max-width: 767.98px) {
+  .section-pad {
+    padding: 3.5rem 0;
+  }
+
+  .hero-section h1 {
+    font-size: clamp(2.4rem, 12vw, 3.6rem);
+  }
+
+  .learning-card {
+    padding: 1.25rem;
+  }
+}
+
+/* 13. Respect people who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

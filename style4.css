@@ -1,0 +1,174 @@
+
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* FIRST FORM: CREATE ACCOUNT */
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    background: #667eea;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.container h1 {
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #667eea;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.container button {
+    width: 100%;
+    padding: 13px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.container button:hover {
+    background: #5365c5;
+}
+
+.container a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECOND FORM: STUDENT REGISTRATION */
+body:has(form:not(.account-form)) {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+body:has(form:not(.account-form)) form {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+body:has(form:not(.account-form)) form label {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+body:has(form:not(.account-form)) form input[type="text"],
+body:has(form:not(.account-form)) form input[type="email"],
+body:has(form:not(.account-form)) form input[type="date"],
+body:has(form:not(.account-form)) form input[type="file"],
+body:has(form:not(.account-form)) form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+
+body:has(form:not(.account-form)) form input:focus,
+body:has(form:not(.account-form)) form select:focus {
+    border-color: #11998e;
+}
+
+body:has(form:not(.account-form)) form input[type="radio"] {
+    accent-color: #11998e;
+    margin: 5px 8px 18px 5px;
+}
+
+body:has(form:not(.account-form)) form input[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    background: #11998e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+body:has(form:not(.account-form)) form input[type="submit"]:hover {
+    background: #087f75;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 480px) {
+    .container,
+    body:has(form:not(.account-form)) form {
+        padding: 25px 20px;
+    }
+}

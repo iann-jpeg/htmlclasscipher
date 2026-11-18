@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A practical HTML, CSS and Bootstrap learning project.">
+  <title>Web Skills Lab | HTML, CSS & Bootstrap</title>
+
+  <!-- Bootstrap CSS: layout, grid, utilities, and ready-made components -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+  <!-- Your CSS should come AFTER Bootstrap so your styles can override it -->
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+  <!-- SEMANTIC HTML: header, nav, main, section, article, aside, footer -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">WebSkills<span class="brand-dot">.</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#html">HTML</a></li>
+            <li class="nav-item"><a class="nav-link" href="#css">CSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#bootstrap">Bootstrap</a></li>
+            <li class="nav-item"><a class="nav-link" href="#forms">Forms</a></li>
+            <li class="nav-item"><a class="nav-link" href="#practice">Practice</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO: Bootstrap container, grid, spacing, typography and buttons -->
+    <section class="hero-section" id="home">
+      <div class="container py-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <p class="eyebrow">FRONT-END DEVELOPMENT • PRACTICAL LAB</p>
+            <h1 class="display-4 fw-bold">Learn the building blocks of the web.</h1>
+            <p class="lead hero-copy">One working page to explore HTML structure, CSS styling, responsive layouts, Bootstrap components and accessible forms.</p>
+            <a class="btn btn-primary btn-lg me-2 mb-2" href="#html">Start learning</a>
+            <a class="btn btn-outline-light btn-lg mb-2" href="#practice">Try the exercises</a>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-card">
+              <div class="code-window-top"><span></span><span></span><span></span><small>index.html</small></div>
+              <pre><code>&lt;html&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, web!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              <p class="mb-0 small text-light-emphasis">Structure + style + responsive tools</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HTML FUNDAMENTALS -->
+    <section class="section-pad" id="html">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">01 / STRUCTURE</p>
+          <h2>HTML essentials</h2>
+          <p>HTML uses elements to describe content and its meaning.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="learning-card h-100">
+              <span class="topic-number">01</span>
+              <h3>Headings and text</h3>
+              <h4>A smaller heading</h4>
+              <p>This is a paragraph. Use <strong>strong</strong> for importance, <em>em</em> for emphasis, and <mark>mark</mark> to highlight text.</p>
+              <p><small>Small print belongs in a small element.</small></p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="learning-card h-100">
+              <span class="topic-number">02</span>
+              <h3>Links and images</h3>
+              <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noreferrer">Read the HTML guide</a></p>
+              <img class="img-fluid rounded demo-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Laptop on a desk showing a software development workspace">
+              <p class="small text-secondary mt-2 mb-0">Images need useful alternative text.</p>
+            </article>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <article class="learning-card h-100">
+              <span class="topic-number">03</span>
+              <h3>Lists</h3>
+              <p>Unordered list:</p>
+              <ul>
+                <li>HTML structure</li>
+                <li>CSS presentation</li>
+                <li>Bootstrap components</li>
+              </ul>
+              <p>Ordered list:</p>
+              <ol>
+                <li>Plan the page</li>
+                <li>Write the markup</li>
+                <li>Style and test it</li>
+              </ol>
+            </article>
+          </div>
+        </div>
+
+        <div class="learning-card mt-4">
+          <h3>Tables and semantic sections</h3>
+          <p>Use a table for genuinely tabular data, not to lay out the whole page.</p>
+          <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+              <caption class="caption-top">Example learning plan</caption>
+              <thead class="table-dark">
+                <tr><th scope="col">Topic</th><th scope="col">Purpose</th><th scope="col">Priority</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>HTML</td><td>Page structure</td><td><span class="badge text-bg-success">High</span></td></tr>
+                <tr><td>CSS</td><td>Visual design</td><td><span class="badge text-bg-success">High</span></td></tr>
+                <tr><td>Bootstrap</td><td>Responsive UI</td><td><span class="badge text-bg-primary">High</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CSS CONCEPTS -->
+    <section class="section-pad section-tint" id="css">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">02 / PRESENTATION</p>
+          <h2>CSS essentials</h2>
+          <p>CSS controls color, typography, spacing, layout, effects and responsive behavior.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="css-demo">
+              <h3>Box model</h3>
+              <p class="mb-0">Every element has content, padding, border and margin. Inspect this box in browser DevTools.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="flex-demo">
+              <div>Flex item A</div><div>Flex item B</div><div>Flex item C</div>
+            </div>
+            <p class="small text-secondary mt-2">CSS Flexbox aligns items along a row or column.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="grid-demo">
+              <div>Grid 1</div><div>Grid 2</div><div>Grid 3</div><div>Grid 4</div>
+            </div>
+            <p class="small text-secondary mt-2">CSS Grid is useful for two-dimensional layouts.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="hover-demo">
+              <h3>Hover and transition</h3>
+              <p class="mb-0">Move your pointer over this card.</p>
+            </div>
+          </div>
+        </div>
+        <div class="learning-card mt-4">
+          <h3>CSS selector examples</h3>
+          <p><code>p</code> selects every paragraph. <code>.learning-card</code> selects elements with that class. <code>#home</code> selects the element with that ID. <code>nav a:hover</code> selects a navigation link while hovered.</p>
+          <p class="mb-0">Open <code>style.css</code> to see selectors, variables, typography, pseudo-classes, Flexbox, Grid, transitions and media queries in action.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOTSTRAP COMPONENTS -->
+    <section class="section-pad" id="bootstrap">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">03 / FRAMEWORK</p>
+          <h2>Bootstrap components</h2>
+          <p>Bootstrap classes give you reusable styling without writing every rule from scratch.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <span class="badge text-bg-primary mb-2">Card</span>
+                <h3 class="card-title h5">Responsive cards</h3>
+                <p class="card-text">Cards group a title, text and action into a reusable block.</p>
+                <a href="#practice" class="btn btn-primary">Explore</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <span class="badge text-bg-success mb-2">Alert</span>
+                <h3 class="card-title h5">Feedback messages</h3>
+                <div class="alert alert-success mb-0" role="status">Your example is ready to explore.</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <span class="badge text-bg-warning mb-2">Progress</span>
+                <h3 class="card-title h5">Progress bars</h3>
+                <div class="progress" role="progressbar" aria-label="Example progress" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <div class="progress-bar" style="width: 70%">70%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-1">
+          <div class="col-lg-6">
+            <div class="learning-card h-100">
+              <h3>Accordion</h3>
+              <div class="accordion" id="lessonAccordion">
+                <div class="accordion-item">
+                  <h4 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#lessonOne" aria-expanded="true" aria-controls="lessonOne">What does HTML do?</button>
+                  </h4>
+                  <div id="lessonOne" class="accordion-collapse collapse show" data-bs-parent="#lessonAccordion">
+                    <div class="accordion-body">HTML defines the structure and meaning of content.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h4 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lessonTwo" aria-expanded="false" aria-controls="lessonTwo">What does CSS do?</button>
+                  </h4>
+                  <div id="lessonTwo" class="accordion-collapse collapse" data-bs-parent="#lessonAccordion">
+                    <div class="accordion-body">CSS controls the appearance and layout of the page.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="learning-card h-100">
+              <h3>Modal and dropdown</h3>
+              <p>These components need Bootstrap's JavaScript bundle.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Open modal</button>
+              <div class="dropdown d-inline-block ms-2">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#html">HTML section</a></li>
+                  <li><a class="dropdown-item" href="#css">CSS section</a></li>
+                  <li><a class="dropdown-item" href="#bootstrap">Bootstrap section</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMS -->
+    <section class="section-pad section-tint" id="forms">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">04 / USER INPUT</p>
+          <h2>Forms and validation</h2>
+          <p>Forms collect information. Labels, input types and validation help users submit it correctly.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-xl-7">
+            <form class="learning-card" id="contactForm">
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full name</label>
+                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="e.g. Ian Abungana" minlength="2" required>
+                <div class="form-text">Use at least two characters.</div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="topic" class="form-label">Topic</label>
+                <select class="form-select" id="topic" name="topic" required>
+                  <option value="">Choose a topic</option>
+                  <option>HTML</option>
+                  <option>CSS</option>
+                  <option>Bootstrap</option>
+                </select>
+              </div>
+              <fieldset class="mb-3">
+                <legend class="fs-6">Preferred learning style</legend>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="style" id="practical" value="Practical">
+                  <label class="form-check-label" for="practical">Practical coding</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="style" id="notes" value="Notes">
+                  <label class="form-check-label" for="notes">Written notes</label>
+                </div>
+              </fieldset>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="updates" name="updates">
+                <label class="form-check-label" for="updates">I want to practise more examples</label>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="What would you like to learn?"></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Check form</button>
+              <p class="small text-secondary mt-3 mb-0">Demo only: this form validates in the browser. It does not send data to a server.</p>
+              <div class="alert alert-success mt-3 d-none" id="formFeedback" role="status"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRACTICE -->
+    <section class="section-pad" id="practice">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">05 / YOUR TURN</p>
+          <h2>Practice checklist</h2>
+          <p>Learn by changing the code, refreshing the page and observing what happens.</p>
+        </div>
+        <div class="learning-card">
+          <div class="form-check mb-3">
+            <input class="form-check-input practice-check" type="checkbox" id="task1">
+            <label class="form-check-label" for="task1">Change the main heading and page title.</label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input practice-check" type="checkbox" id="task2">
+            <label class="form-check-label" for="task2">Change CSS colors, font sizes, padding and margins.</label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input practice-check" type="checkbox" id="task3">
+            <label class="form-check-label" for="task3">Resize the browser to test the responsive grid and navbar.</label>
+          </div>
+          <div class="form-check mb-3">
+            <input class="form-check-input practice-check" type="checkbox" id="task4">
+            <label class="form-check-label" for="task4">Add a new card, a list, a link and a form field.</label>
+          </div>
+          <div class="progress mt-4" role="progressbar" aria-label="Practice checklist completion" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="practiceProgress">
+            <div class="progress-bar" id="practiceProgressBar" style="width: 0%">0%</div>
+          </div>
+          <p class="small text-secondary mt-2 mb-0" id="practiceStatus">0 of 4 exercises complete.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container py-4 d-flex flex-column flex-md-row justify-content-between gap-2">
+      <p class="mb-0">WebSkills Lab · Learn by building.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- Modal must be outside other modal/dialog content -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="exampleModalLabel">A Bootstrap modal</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">A modal displays focused content above the current page.</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap bundle includes the JavaScript needed by modal, navbar, dropdown, accordion, etc. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
